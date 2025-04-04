@@ -1,0 +1,6 @@
+models/
+wandb/
+runs/
+*.zip
+__pycache__/
+.vscode/
