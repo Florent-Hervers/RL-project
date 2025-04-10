@@ -1,3 +1,5 @@
+# Hyperparam ref: https://huggingface.co/sb3/ppo_lstm-CarRacing-v0
+
 hyperparams:
   batch_size: 128
   clip_range: 0.2
@@ -18,7 +20,7 @@ policy_kwargs:
   log_std_init: -2
   ortho_init: false
   enable_critic_lstm: false
-  activation_fn: GELU   # Utilisez getattr(nn, 'GELU') dans le code si nécessaire
+  activation_fn: GELU
   lstm_hidden_size: 128
 
 transformation:
