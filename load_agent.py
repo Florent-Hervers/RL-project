@@ -1,5 +1,5 @@
 # Place your imports below
-
+from stable_baselines3 import PPO
 
 def load_best_agent():
     """
@@ -39,4 +39,5 @@ def load_best_agent():
         >>> observation = get_current_observation()  # Your method to fetch the current observation.
         >>> action = model(observation)
     """
-    pass  # Replace this with your implementation
+    # TODO update le nom du zip pour le model entrainé
+    return PPO.load("ppo_carracing_final.zip")
