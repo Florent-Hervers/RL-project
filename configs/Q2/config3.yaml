@@ -35,3 +35,4 @@ transformation:
     norm_obs: false
 
 total_timesteps: 2000000
+max_episode_step: 1000

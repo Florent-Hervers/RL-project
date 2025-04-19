@@ -32,6 +32,7 @@ if __name__ == "__main__":
     policy_kwargs = config["policy_kwargs"]
     transformation = config["transformation"]
     total_timesteps = config["total_timesteps"]
+    max_episode_step = config["max_episode_step"]
 
     resize_obs_shape = tuple(transformation.get("resize_observation", None))
     grayscale_params = transformation.get("grayscale_observation", None)
@@ -69,7 +70,8 @@ if __name__ == "__main__":
                 continuous=True,
                 lap_complete_percent=0.95,
                 domain_randomize=False,
-                render_mode="rgb_array"
+                render_mode="rgb_array",
+                max_episode_steps = max_episode_step
             )
             if resize_obs_shape is not None:
                 env = ResizeObservation(env, resize_obs_shape)

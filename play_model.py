@@ -8,18 +8,18 @@ from gymnasium.wrappers import ResizeObservation, GrayscaleObservation
 
 def make_env():
     def _init():
-        env = gym.make("CarRacing-v3", continuous=True, lap_complete_percent=0.95, domain_randomize=False, render_mode="rgb_array") # entrainement sur "rgb-array" car plus opti en terme de compute, le mode human display qqch
+        env = gym.make("CarRacing-v3", continuous=True, lap_complete_percent=0.95, domain_randomize=False, render_mode="rgb_array", max_episode_steps = 12000) # entrainement sur "rgb-array" car plus opti en terme de compute, le mode human display qqch
         env = ResizeObservation(env, (64, 64))
         env = GrayscaleObservation(env, keep_dim=True)
         return env
     return _init
 
 env = DummyVecEnv([make_env()])
-env = VecFrameStack(env, n_stack=2)
+env = VecFrameStack(env, n_stack=1)
 env = VecNormalize(env, norm_reward=True, norm_obs=False)
 
 # load agent
-model = RecurrentPPO.load("trained_models/q2_final.zip")
+model = RecurrentPPO.load("trained_models/q2_config4.zip")
 
 # Source : https://sb3-contrib.readthedocs.io/en/master/modules/ppo_recurrent.html
 obs = env.reset()
