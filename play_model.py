@@ -19,7 +19,7 @@ env = VecFrameStack(env, n_stack=1)
 env = VecNormalize(env, norm_reward=True, norm_obs=False)
 
 # load agent
-model = RecurrentPPO.load("trained_models/q2_config5.zip")
+model = RecurrentPPO.load("trained_models/q2_config7.zip")
 
 # Source : https://sb3-contrib.readthedocs.io/en/master/modules/ppo_recurrent.html
 obs = env.reset()
