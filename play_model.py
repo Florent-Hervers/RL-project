@@ -55,8 +55,8 @@ std_reward = np.std(all_rewards)
 with open("Results/eval_results_config6.txt", "w") as f:
     f.write("=== Results summary ===\n")
     for i, reward in enumerate(all_rewards):
-        f.write(f"Episode {i+1}: Mean reward = {reward.mean():.2f}\n")
-    f.write("\nSummary over all episodes:\n")
+        f.write(f"Track {i+1}: Mean reward = {reward.mean():.2f}\n")
+    f.write("\nSummary over all tracks:\n")
     f.write(f"Mean reward: {mean_reward:.2f}\n")
     f.write(f"Reward std: {std_reward:.2f}\n")
     f.write(f"Min: {np.min(all_rewards):.2f}\n")
