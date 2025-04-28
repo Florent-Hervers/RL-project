@@ -1,0 +1,17 @@
+=== Results summary ===
+Track 1: Mean reward = 689.89
+Track 2: Mean reward = 907.40
+Track 3: Mean reward = 414.58
+Track 4: Mean reward = 753.04
+Track 5: Mean reward = 894.81
+Track 6: Mean reward = 874.21
+Track 7: Mean reward = 545.59
+Track 8: Mean reward = 868.71
+Track 9: Mean reward = 611.55
+Track 10: Mean reward = 752.94
+
+Summary over all tracks:
+Mean reward: 731.27
+Reward std: 157.75
+Min: 414.58
+Max: 907.40
