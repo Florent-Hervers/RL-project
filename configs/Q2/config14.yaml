@@ -34,5 +34,5 @@ transformation:
     norm_reward: false
     norm_obs: false           # Image already normalized by default
 
-total_timesteps: 1500000
+total_timesteps: 2000000
 max_episode_step: 12000
