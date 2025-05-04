@@ -29,7 +29,7 @@ transformation:
   grayscale_observation:
     keep_dim: true
   n_envs: 12
-  frame_stack: 2              # See TP5
+  frame_stack: 4              # See TP5
   normalize:
     norm_reward: false
     norm_obs: false           # Image already normalized by default
