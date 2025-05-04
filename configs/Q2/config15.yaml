@@ -1,0 +1,38 @@
+# Hyperparam ref: https://huggingface.co/sb3/ppo_lstm-CarRacing-v0
+
+hyperparams:
+  batch_size: 64             # Don't update the batch_size (considered as less relevant)
+  clip_range: 0.2
+  ent_coef: 0.0
+  gae_lambda: 0.95
+  gamma: 0.98
+  learning_rate:
+    schedule: linear
+    initial: 0.0001           # See TP5
+  max_grad_norm: 0.5
+  n_epochs: 10
+  n_steps: 2048               # Increase the number of steps to have the same number of step at each update
+  vf_coef: 0.5
+  normalize_advantage: True   # See TP5
+
+policy_kwargs:
+  log_std_init: -2
+  ortho_init: True            # See TP5
+  enable_critic_lstm: false 
+  activation_fn: Tanh         # No reason to use GELU + tanh often used with ortho_init to avoid vanishing gradient
+  lstm_hidden_size: 128
+  optimizer_kwargs: 
+    eps: 0.00001              # See TP5
+
+transformation:
+  resize_observation: [64, 64]
+  grayscale_observation:
+    keep_dim: true
+  n_envs: 12
+  frame_stack: 1              # See TP5
+  normalize:
+    norm_reward: false
+    norm_obs: false           # Image already normalized by default
+
+total_timesteps: 2000000
+max_episode_step: 12000
