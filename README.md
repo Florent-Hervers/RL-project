@@ -27,3 +27,5 @@ python train.py -c my_config --wandb my_experiment --save_model
 ```
 
 ## Training A2C using our jupyter notebook for Question 3
+
+For Question 3, we chose to implement our solution in a Jupyter notebook. To re-run the experiment, simply navigate to the dedicated cell containing the hyperparameters and modify them accordingly.
