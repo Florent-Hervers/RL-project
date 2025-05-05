@@ -1,5 +1,7 @@
+# RL Project
+Code repository for the project from Reinforcement Learning course at ULiege.
 
-# Training PPO-LSTM for Question 2 (External Library Algorithm)
+## Training PPO-LSTM for Question 2 (External Library Algorithm)
 
 To train a PPO-LSTM model using one of our predefined configurations, simply run the following command in a terminal:
 
