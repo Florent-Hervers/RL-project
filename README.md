@@ -25,3 +25,5 @@ python train.py -c CONFIG_NAME --wandb RUN_NAME --save_model
 ```bash
 python train.py -c my_config --wandb my_experiment --save_model
 ```
+
+## Training A2C using our jupyter notebook for Question 3
