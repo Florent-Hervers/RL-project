@@ -1,5 +1,5 @@
 # RL Project
-Code repository for the project from Reinforcement Learning course at ULiege.
+Code repository for the project of Reinforcement Learning course at ULiege.
 
 ## Training PPO-LSTM for Question 2 (External Library Algorithm)
 
