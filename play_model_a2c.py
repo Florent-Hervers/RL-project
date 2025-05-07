@@ -209,7 +209,7 @@ for i in trange(n_episodes, desc="Episodes"):
         agent = Agent(env, config["NB_FRAMES"], config["OBSERVATION_SIZE"], config).to(device)
         optimizer = optim.Adam(agent.parameters(), lr=config["LEARNING_RATE"], eps=1e-5)
 
-        checkpoint = torch.load(f"trained_models/a2c/a2c_config{args.config}.pt", map_location=device)
+        checkpoint = torch.load(f"trained_models/Q3/a2c_config{args.config}.pt", map_location=device)
         agent.load_state_dict(checkpoint["model_state_dict"])
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
 

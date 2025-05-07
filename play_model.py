@@ -29,7 +29,7 @@ def make_env(seed=None):
     return _init
 
 # Chargement du modèle
-model = RecurrentPPO.load(f"trained_models/q2_config{args.config}.zip")
+model = RecurrentPPO.load(f"trained_models/Q2/q2_config{args.config}.zip")
 
 try:
     with open(f"configs/Q2/config{args.config}.yaml", "r") as f:
