@@ -4,4 +4,4 @@ runs/
 *.zip
 __pycache__/
 .vscode/
-!trained_models/*.zip
+!trained_models/*/*.zip

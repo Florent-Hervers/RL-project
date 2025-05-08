@@ -76,7 +76,7 @@ mean_reward = np.mean(all_rewards)
 std_reward = np.std(all_rewards)
 
 if args.evaluate:
-    with open(f"Results/eval_results_config{args.config}.txt", "w") as f:
+    with open(f"Results/Q2/eval_results_config{args.config}.txt", "w") as f:
         f.write("=== Results summary ===\n")
         for i, reward in enumerate(all_rewards):
             f.write(f"Track {i+1}: Mean reward = {reward.mean():.2f}\n")
