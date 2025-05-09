@@ -34,7 +34,7 @@ python train.py -c my_config --wandb my_experiment --save_model
 - For the GAMMA hyperparameter: the configs 14 (GAMMA = 0.9975) and 15 (GAMMA = 0.98) tried to modify the model based on the configuration 13.
 - For the FRAME_STACK hyperparameter: the configs 16, 17 and 18 tried to add more FRAME_STACK using the same hyperparameters than for config 13. Config 8 also tried to add frame stacks from config 6 but as the model resulting from config 8 is garbage, we can't deduce anything from it.
 
-## Evaluating PPOLSTM for Question 2
+## Evaluating PPO-LSTM for Question 2
 Our results in `Results/Q2` have been computed by running the *play_model.py* file. We decided to run the model on 10 different tracks to correctly assess its global performance. Simply run the following command in the terminal:
 
 ```bash
