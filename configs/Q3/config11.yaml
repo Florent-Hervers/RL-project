@@ -55,3 +55,7 @@ TOTAL_TIMESTEPS:
     value: 2e+06
 VF_COEF:
     value: 0.5
+LSTM_LAYERS:
+    value: 3
+LSTM_HIDDEN_SIZE:
+    value: 256
