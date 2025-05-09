@@ -8,7 +8,7 @@ conda create --name car_racing_env python=3.10
 conda activate car_racing_env
 ```
 Once the conda environement using python 3.10 is set up, the required dependencies can be installed using
-````bash
+```bash
 pip install -r requirements.txt
 ```
 
