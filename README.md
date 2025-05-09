@@ -1,6 +1,18 @@
 # RL Project
 Code repository for the project of Reinforcement Learning course at ULiege.
 
+## Running a run to compare PPO-LSTM and A2C
+As requested, it is also possible to run `interface.py` to load the best model from Question 2 and evaluate its performance on a single track. Then, the best model from Question 3 is run on the same track. This directly compares the two best models from the two questions on the same track. Simply run the following command in the terminal:
+
+```bash
+python interface.py
+```
+
+# Extra script definitions
+The following section describe the script used to train, see the model in action and evaluate the trained models. All trained models are available on the [github](https://github.com/Florent-Hervers/RL-project). To not overload the submission archive only the best models were provided: the config number that yield those models are:
+- Question 2 (PPO-LSTM model): 13
+- Question 3 (A2C model): 12
+
 ## Training PPO-LSTM for Question 2 (External Library Algorithm)
 
 To train a PPO-LSTM model using one of our predefined configurations, simply run the following command in a terminal:
@@ -23,7 +35,7 @@ python train.py -c CONFIG_NAME --wandb RUN_NAME --save_model
 ### Example
 
 ```bash
-python train.py -c my_config --wandb my_experiment --save_model
+python train.py -c config13 --wandb "Train best model" --save_model
 ```
 
 ### Configurations descriptions:
@@ -43,12 +55,12 @@ python play_model.py -c 13 --evaluate --human
 
 ### Required Arguments
 
-- `-c`, `--config` (int): **Required**. The number of the config to evaluate.
+- `-c`, `--config` (int): **Required**. The number of the config to evaluate (should be between 1 and 18). If the config 13 was selectet, the model should be in the `trained_models/Q2/q2_config13.zip` file.
 
 ### Optional Arguments
 
 - `--human` (Boolean): If true, display the run on the screen.
-- `--evaluate` (Boolean): If true, rerun the model 10 times to evaluate the model performances.
+- `--evaluate` (Boolean): If true, rerun the model 10 times to evaluate the model performances. The summary of the results on the evaluations tracks for every configuration can be found in the folder `Results/Q2`. Use `--no-evaluate` to run the model on a single random map.
 
 ## Training A2C using our jupyter notebook for Question 3
 
@@ -63,16 +75,9 @@ python play_model_a2c.py -c 12 --evaluate --human
 
 ### Required Arguments
 
-- `-c`, `--config` (int): **Required**. The number of the config to evaluate.
+- `-c`, `--config` (int): **Required**. The number of the config to evaluate (should be between 1 and 14). If the config 12 was selectet, the model should be in the `trained_models/Q2/a2c_config12.pt` file.
 
 ### Optional Arguments
 
 - `--human` (Boolean): If true, display the run on the screen.
-- `--evaluate` (Boolean): If true, rerun the model 10 times to evaluate the model performances.
-
-## Running a run to compare PPO-LSTM and A2C
-As requested, it is also possible to run `interface.py` to load the best model from Question 2 and evaluate its performance on a single track. Then, the best model from Question 3 is run on the same track. This directly compares the two best models from the two questions on the same track. Simply run the following command in the terminal:
-
-```bash
-python interface.py
-```
+- `--evaluate` (Boolean): If true, rerun the model 10 times to evaluate the model performances. The summary of the results on the evaluations tracks for every configuration can be found in the folder `Results/Q2`. Use `--no-evaluate` to run the model on a single random map
