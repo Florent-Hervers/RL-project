@@ -53,3 +53,19 @@ python play_model.py -c 13 --evaluate --human
 ## Training A2C using our jupyter notebook for Question 3
 
 For Question 3, we chose to implement our solution in a Jupyter notebook. To re-run the experiment, simply navigate to the dedicated cell containing the hyperparameters and modify them accordingly. The parameters used for every models are described in the `configs/Q3` folder.
+
+## Evaluating A2C for Question 3
+Our results in `Results/Q3` have been computed by running the *play_model_a2c.py* file. We decided to run the model on 10 different tracks to correctly assess its global performance. Simply run the following command in the terminal:
+
+```bash
+python play_model_a2c.py -c 12 --evaluate --human
+```
+
+### Required Arguments
+
+- `-c`, `--config` (int): **Required**. The number of the config to evaluate.
+
+### Optional Arguments
+
+- `--human` (Boolean): If true, display the run on the screen.
+- `--evaluate` (Boolean): If true, rerun the model 10 times to evaluate the model performances.
