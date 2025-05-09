@@ -69,3 +69,10 @@ python play_model_a2c.py -c 12 --evaluate --human
 
 - `--human` (Boolean): If true, display the run on the screen.
 - `--evaluate` (Boolean): If true, rerun the model 10 times to evaluate the model performances.
+
+## Running a run to compare PPO-LSTM and A2C
+As requested, it is also possible to run `interface.py` to load the best model from Question 2 and evaluate its performance on a single track. Then, the best model from Question 3 is run on the same track. This directly compares the two best models from the two questions on the same track. Simply run the following command in the terminal:
+
+```bash
+python interface.py
+```
