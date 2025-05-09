@@ -1,6 +1,17 @@
 # RL Project
 Code repository for the project of Reinforcement Learning course at ULiege.
 
+## Environement setup
+As requested in the statement, the python environement can be set up using the following commands:
+```bash
+conda create --name car_racing_env python=3.10
+conda activate car_racing_env
+```
+Once the conda environement using python 3.10 is set up, the required dependencies can be installed using
+````bash
+pip install -r requirements.txt
+```
+
 ## Running a run to compare PPO-LSTM and A2C
 As requested, it is also possible to run `interface.py` to load the best model from Question 2 and evaluate its performance on a single track. Then, the best model from Question 3 is run on the same track. This directly compares the two best models from the two questions on the same track. Simply run the following command in the terminal:
 
