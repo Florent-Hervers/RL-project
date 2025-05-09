@@ -43,7 +43,7 @@ def make_env(config, seed=None):
         return env
     return thunk
 
-if args.config <= 7:
+if args.config <= 7 or args.config == 13 or args.config == 14:
     class Agent(nn.Module):
         def __init__(self, envs, nb_frames, image_size, config=None):
             super(Agent, self).__init__()
